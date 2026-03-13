@@ -20,7 +20,7 @@ namespace eCommerce.API.Controller
 
         [HttpPost]
         [Route("register")]
-        public async Task<IActionResult> Register(RegisterRequest registerRequest)
+        public async Task<IActionResult> Register(Core.DTO.RegisterRequest registerRequest)
         {
 
             //check for invalid registerRequest
@@ -61,9 +61,10 @@ namespace eCommerce.API.Controller
 
             if(authenticationResponse ==null || authenticationResponse.Sucess == false)
             {
-                return BadRequest("Login failed");
+                return Unauthorized(authenticationResponse);
             }
 
+            return Ok(authenticationResponse); ;
 
         }
 

@@ -9,6 +9,6 @@ namespace eCommerce.Core.Entities
         public string? Password { get; set; }
         public string? PersonName { get; set; }
         public string? Gender { get; set; }
-
+            
     }
 }

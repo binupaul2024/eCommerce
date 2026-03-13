@@ -8,4 +8,5 @@ namespace eCommerce.Core.DTO
         string? PersonName,
         GenderOption Gender
         );
+    
 }
